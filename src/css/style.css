@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url();
+}
+
+.orbita {
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.orbita::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+}
+.neptun {
+  width: 750px;
+  height: 750px;
+  animation: neptun infinite linear 15s;
+}
+.neptun::before {
+  width: 50px;
+  height: 50px;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Neptune_cutout.png/1200px-Neptune_cutout.png)
+    center/cover;
+}
+.neptun::after {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  content: "";
+  position: absolute;
+  left: -50px;
+  border-radius: 50%;
+  animation: planet infinite linear 10s;
+}
+@keyframes planet {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neptun {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.uran {
+  width: 650px;
+  height: 650px;
+  animation: uran infinite linear 14s;
+}
+
+.uran::before {
+  width: 50px;
+  height: 50px;
+  background: #e56033;
+}
+
+@keyframes uran {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.saturn {
+  width: 550px;
+  height: 550px;
+  animation: satun infinite linear 13s;
+}
+
+.saturn::before {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+@keyframes satun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ypiter {
+  height: 450px;
+  width: 450px;
+  animation: ypiter infinite linear 12s;
+}
+.ypiter::before {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+@keyframes ypiter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mars {
+  height: 350px;
+  width: 350px;
+  animation: mars infinite linear 11s;
+}
+.mars::before {
+  width: 50px;
+  height: 50px;
+  background-color: #33e589;
+}
+@keyframes mars {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.zemla {
+  height: 250px;
+  width: 250px;
+  animation: zemly infinite linear 13s;
+}
+.zemla::before {
+  height: 50px;
+  width: 50px;
+  background: #000;
+}
+@keyframes zemly {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.venera {
+  height: 150px;
+  width: 150px;
+  animation: venera infinite linear 10s;
+}
+.venera::before {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+}
+@keyframes venera {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.merkuriy {
+  height: 75px;
+  width: 75px;
+  animation: merkuriy infinite linear 12s;
+}
+.merkuriy::before {
+  width: 30px;
+  height: 30px;
+  background: #dbcf22;
+}
+@keyframes merkuriy {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sun {
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+  border-radius: 50%;
+  background: url(https://static.vecteezy.com/system/resources/previews/009/304/897/original/sun-icon-set-clipart-design-illustration-free-png.png)
+    center/cover;
+}
+
+.aster {
+  width: 70px;
+  height: 50px;
+  background: url(https://www.pngall.com/wp-content/uploads/12/Asteroid-PNG.png)
+    center/cover;
+  animation: aster infinite linear 4s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes aster {
+  0% {
+    right: 0;
+    top: 0;
+  }
+  100% {
+    transform: translate(-1400px, 700px);
+  }
+}
